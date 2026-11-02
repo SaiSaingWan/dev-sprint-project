@@ -7,4 +7,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        student: 'index.html',
+        admin: 'admin.html',
+      },
+    },
+  },
 })
