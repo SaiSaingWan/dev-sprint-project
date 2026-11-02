@@ -5,7 +5,7 @@ import {
   Search, Settings, Shield, Sparkles, Target, UserRound, Users, X,
 } from 'lucide-react';
 import {
-  demoActivities, demoAssignments, demoAttempts, demoFeedback, demoMonitoring,
+  demoActivities, demoAiReports, demoAssignments, demoAttempts, demoMonitoring,
   demoScenarios, demoStats, demoStudents,
 } from './data/mockData';
 
@@ -90,7 +90,7 @@ function Results() {
 }
 
 function Feedback() {
-  const [selected, setSelected] = useState(null); return <><PageTitle eyebrow="Analyze" title="Feedback & Reports" description="Review student feedback and report summaries." /><div className="ad-feedback-layout"><section className="ad-card">{demoFeedback.map((item) => <button className={selected?.id === item.id ? 'ad-feedback active' : 'ad-feedback'} key={item.id} onClick={() => setSelected(item)}><span className="ad-student-avatar"><UserRound size={18} /></span><span><strong>{item.student}</strong><small>{item.date}</small><em>{item.text}</em></span><ChevronRight size={16} /></button>)}</section><section className="ad-card ad-feedback-detail"><h2>{selected ? 'Feedback detail' : 'Select feedback'}</h2>{selected ? <><p className="ad-muted">{selected.student} · {selected.date}</p><blockquote>{selected.text}</blockquote><p>{selected.report}</p></> : <p className="ad-muted">Choose an item to inspect the report summary.</p>}</section></div></>;
+  const [selected, setSelected] = useState(null); return <><PageTitle eyebrow="Analyze" title="AI Feedback & Reports" description="Review AI-generated strengths, weaknesses, and learning recommendations for students."><span className="ad-demo-pill"><Sparkles size={14} /> Demo AI analysis</span></PageTitle><div className="ad-feedback-layout"><section className="ad-card"><div className="ad-card-head"><div><h2>Student reports</h2><p>Generated from demo attempt performance data</p></div></div>{demoAiReports.map((item) => <button className={selected?.id === item.id ? 'ad-feedback active' : 'ad-feedback'} key={item.id} onClick={() => setSelected(item)}><span className="ad-student-avatar"><UserRound size={18} /></span><span><strong>{item.student} · {item.name}</strong><small>Generated {item.generatedAt}</small><em>{item.summary}</em></span><ChevronRight size={16} /></button>)}</section><section className="ad-card ad-feedback-detail"><h2>{selected ? `AI report · ${selected.name}` : 'Select a student report'}</h2>{selected ? <><p className="ad-muted">{selected.student} · Generated {selected.generatedAt}</p><blockquote>{selected.summary}</blockquote><div className="ad-report-section"><strong>Strengths</strong>{selected.strengths.map((item) => <p key={item}><Check size={14} /> {item}</p>)}</div><div className="ad-report-section"><strong>Areas to improve</strong>{selected.weaknesses.map((item) => <p key={item}><Target size={14} /> {item}</p>)}</div><div className="ad-report-section"><strong>Recommended next step</strong><p>{selected.recommendation}</p></div></> : <p className="ad-muted">Choose a student to inspect the generated performance report.</p>}</section></div><p className="ad-demo-note"><Shield size={14} /> Demo AI analysis only. No AI provider is connected and no student feedback is collected here.</p></>;
 }
 
 function SettingsPage() {

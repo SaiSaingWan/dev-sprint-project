@@ -37,9 +37,37 @@ export const demoActivities = [
   { text: 'New attempt from ST124', detail: 'Payment Gateway Meltdown · 85%', time: '8m ago', tone: 'green' },
 ];
 
-export const demoFeedback = [
-  { id: 'feedback-1', student: 'ST002', date: 'Nov 2, 2026', text: 'The scenario was really challenging but fun!', report: 'Positive difficulty feedback.' },
-  { id: 'feedback-2', student: 'ST004', date: 'Oct 31, 2026', text: 'Maybe add more hints during the database phase.', report: 'Requested additional guidance.' },
+export const demoAiReports = [
+  {
+    id: 'report-1',
+    student: 'ST001',
+    name: 'Alex Developer',
+    generatedAt: 'Nov 2, 2026',
+    summary: 'Strong incident response performance with consistent decisions across all three roles.',
+    strengths: ['Clear prioritization during high-impact incidents', 'Strong recovery verification habits'],
+    weaknesses: ['Needs more practice explaining trade-offs to stakeholders'],
+    recommendation: 'Assign an advanced scenario focused on communication and escalation.',
+  },
+  {
+    id: 'report-2',
+    student: 'ST002',
+    name: 'Jamie Tester',
+    generatedAt: 'Nov 2, 2026',
+    summary: 'Reliable test execution with an opportunity to improve speed during ambiguous failures.',
+    strengths: ['Thorough edge-case coverage', 'Good use of evidence before making a decision'],
+    weaknesses: ['Response time increased during database-related questions'],
+    recommendation: 'Recommend a database troubleshooting practice assignment.',
+  },
+  {
+    id: 'report-3',
+    student: 'ST003',
+    name: 'Taylor Manager',
+    generatedAt: 'Nov 1, 2026',
+    summary: 'Developing leadership judgment; communication choices were stronger than technical prioritization.',
+    strengths: ['Calm stakeholder communication', 'Consistent ownership of follow-up actions'],
+    weaknesses: ['Needs stronger technical risk assessment before choosing a mitigation'],
+    recommendation: 'Pair a Project Manager scenario with a guided technical review.',
+  },
 ];
 
 export const demoMonitoring = [
