@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Zap, User, Home, Target, TrendingUp, IdCard } from 'lucide-react';
+import { Zap, User, Home, Target, TrendingUp, UserCheck, FileText } from 'lucide-react';
 import HomePage from './pages/HomePage';
 import MissionsPage from './pages/MissionsPage';
 import ProgressPage from './pages/ProgressPage';
 import ProfilePage from './pages/ProfilePage';
+import ReportsPage from './pages/ReportsPage';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -12,7 +13,8 @@ export default function App() {
     { id: 'home', label: 'Home / Feed', icon: Home },
     { id: 'missions', label: 'Missions', icon: Target },
     { id: 'progress', label: 'Career & Progress', icon: TrendingUp },
-    { id: 'profile', label: 'Profile & Reports', icon: IdCard },
+    { id: 'profile', label: 'User Profile', icon: UserCheck },
+    { id: 'reports', label: 'Sprint Reports', icon: FileText },
   ];
 
   return (
@@ -81,6 +83,7 @@ export default function App() {
           {activeTab === 'missions' && <MissionsPage />}
           {activeTab === 'progress' && <ProgressPage />}
           {activeTab === 'profile' && <ProfilePage />}
+          {activeTab === 'reports' && <ReportsPage />}
         </main>
       </div>
 
