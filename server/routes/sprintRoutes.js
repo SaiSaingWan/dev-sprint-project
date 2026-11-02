@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { db, admin } = require('../config/firebase');
+const { updateHomeDashboardCache } = require('../services/dashboardService');
 
 // POST /api/sprint/submit
 router.post('/submit', async (req, res) => {
@@ -63,6 +64,11 @@ router.post('/submit', async (req, res) => {
 
       return { finalScore: score, expAwarded: expDelta, newHighScore };
     });
+
+    // 4. Trigger background refresh of the pre-computed Home Dashboard cache
+    updateHomeDashboardCache().catch((err) => 
+      console.error('Failed to auto-refresh home dashboard cache:', err)
+    );
 
     res.status(200).json({ success: true, ...result });
   } catch (error) {
