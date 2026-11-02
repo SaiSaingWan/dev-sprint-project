@@ -14,10 +14,10 @@ export const demoScenarios = [
 ];
 
 export const demoStudents = [
-  { id: 'ST001', name: 'Alex Developer', email: 'alex@devsprint.com', status: 'Active', score: 850, attempts: 5, joined: 'Sep 12, 2026' },
-  { id: 'ST002', name: 'Jamie Tester', email: 'jamie@devsprint.com', status: 'Active', score: 620, attempts: 4, joined: 'Sep 18, 2026' },
-  { id: 'ST003', name: 'Taylor Manager', email: 'taylor@devsprint.com', status: 'Inactive', score: 430, attempts: 2, joined: 'Oct 02, 2026' },
-  { id: 'ST004', name: 'Nanda Win', email: 'nanda@devsprint.com', status: 'Active', score: 790, attempts: 6, joined: 'Oct 05, 2026' },
+  { id: 'ST001', name: 'မောင်မင်းထက်', email: 'maung.minhtet@devsprint.com', status: 'Active', score: 850, attempts: 5, joined: 'Sep 12, 2026' },
+  { id: 'ST002', name: 'မေသက်ထား', email: 'may.thettaw@devsprint.com', status: 'Active', score: 620, attempts: 4, joined: 'Sep 18, 2026' },
+  { id: 'ST003', name: 'ကိုကိုအောင်', email: 'ko.ko.aung@devsprint.com', status: 'Inactive', score: 430, attempts: 2, joined: 'Oct 02, 2026' },
+  { id: 'ST004', name: 'သီရိမွန်', email: 'thiri.mon@devsprint.com', status: 'Active', score: 790, attempts: 6, joined: 'Oct 05, 2026' },
 ];
 
 export const demoAttempts = [
@@ -32,7 +32,7 @@ export const demoAssignments = [
 ];
 
 export const demoActivities = [
-  { text: 'New student registered', detail: 'ST124 · Alex Developer', time: '2m ago', tone: 'blue' },
+  { text: 'New student registered', detail: 'ST124 · သီရိမွန်', time: '2m ago', tone: 'blue' },
   { text: 'Scenario “Database Failure” updated', detail: 'Draft saved by Admin', time: '5m ago', tone: 'amber' },
   { text: 'New attempt from ST124', detail: 'Payment Gateway Meltdown · 85%', time: '8m ago', tone: 'green' },
 ];
@@ -41,36 +41,48 @@ export const demoAiReports = [
   {
     id: 'report-1',
     student: 'ST001',
-    name: 'Alex Developer',
+    name: 'မောင်မင်းထက်',
+    role: 'Project Manager',
+    scenario: 'Sprint 12 Scope Creep Crisis',
+    score: 85,
     generatedAt: 'Nov 2, 2026',
-    summary: 'Strong incident response performance with consistent decisions across all three roles.',
-    strengths: ['Clear prioritization during high-impact incidents', 'Strong recovery verification habits'],
-    weaknesses: ['Needs more practice explaining trade-offs to stakeholders'],
-    recommendation: 'Assign an advanced scenario focused on communication and escalation.',
+    summary: 'Answers show good knowledge of Scrum roles and sprint prioritization. The student can identify scope risk and protect the sprint goal.',
+    answerEvidence: 'Correctly selected a backlog discussion and stakeholder alignment before accepting new work.',
+    strengths: ['Good understanding of Scrum roles and sprint goals', 'Clear stakeholder communication'],
+    weaknesses: ['Needs deeper knowledge of estimation and capacity planning'],
+    recommendation: 'Assign a Scrum planning scenario focused on story points and team capacity.',
   },
   {
     id: 'report-2',
     student: 'ST002',
-    name: 'Jamie Tester',
+    name: 'မေသက်ထား',
+    role: 'QA Engineer',
+    scenario: 'Payment Gateway Meltdown',
+    score: 78,
     generatedAt: 'Nov 2, 2026',
-    summary: 'Reliable test execution with an opportunity to improve speed during ambiguous failures.',
-    strengths: ['Thorough edge-case coverage', 'Good use of evidence before making a decision'],
-    weaknesses: ['Response time increased during database-related questions'],
-    recommendation: 'Recommend a database troubleshooting practice assignment.',
+    summary: 'Answers show good knowledge of test boundaries and defect reproduction. The student investigates carefully before recommending a fix.',
+    answerEvidence: 'Correctly prioritized reproducing the payment failure and checking affected system boundaries before closing the incident.',
+    strengths: ['Strong edge-case thinking', 'Good evidence-based investigation'],
+    weaknesses: ['Needs more knowledge of database locks and query performance'],
+    recommendation: 'Assign a database troubleshooting scenario with production-like locking issues.',
   },
   {
     id: 'report-3',
     student: 'ST003',
-    name: 'Taylor Manager',
+    name: 'ကိုကိုအောင်',
+    role: 'Software Tester',
+    scenario: 'Database Failure',
+    score: 64,
     generatedAt: 'Nov 1, 2026',
-    summary: 'Developing leadership judgment; communication choices were stronger than technical prioritization.',
-    strengths: ['Calm stakeholder communication', 'Consistent ownership of follow-up actions'],
-    weaknesses: ['Needs stronger technical risk assessment before choosing a mitigation'],
-    recommendation: 'Pair a Project Manager scenario with a guided technical review.',
+    summary: 'Answers show basic knowledge of regression testing, but the student needs support choosing test coverage during a database incident.',
+    answerEvidence: 'Selected a smoke test approach but missed data-integrity checks for records affected by the migration.',
+    strengths: ['Understands basic smoke-test priorities', 'Recognizes the need to verify a fix'],
+    weaknesses: ['Needs stronger knowledge of data integrity and regression strategy'],
+    recommendation: 'Review database validation techniques before the next advanced testing scenario.',
   },
 ];
 
 export const demoMonitoring = [
-  { student: 'ST005 · Nanda Win', scenario: 'Payment Gateway Meltdown', state: 'In Progress', started: '10:24 AM', events: ['Tab switched (10:26 AM)', 'Screen off (10:27 AM)'] },
-  { student: 'ST001 · Alex Developer', scenario: 'API Timeout', state: 'Completed', started: '9:48 AM', events: ['Submitted (10:02 AM)'] },
+  { student: 'ST005 · သီရိမွန်', scenario: 'Payment Gateway Meltdown', state: 'In Progress', started: '10:24 AM', events: ['Tab switched (10:26 AM)', 'Screen off (10:27 AM)'] },
+  { student: 'ST001 · မောင်မင်းထက်', scenario: 'API Timeout', state: 'Completed', started: '9:48 AM', events: ['Submitted (10:02 AM)'] },
 ];
