@@ -14,10 +14,10 @@ export const demoScenarios = [
 ];
 
 export const demoStudents = [
-  { id: 'ST001', name: 'မောင်မင်းထက်', email: 'maung.minhtet@devsprint.com', status: 'Active', score: 850, attempts: 5, joined: 'Sep 12, 2026' },
-  { id: 'ST002', name: 'မေသက်ထား', email: 'may.thettaw@devsprint.com', status: 'Active', score: 620, attempts: 4, joined: 'Sep 18, 2026' },
-  { id: 'ST003', name: 'ကိုကိုအောင်', email: 'ko.ko.aung@devsprint.com', status: 'Inactive', score: 430, attempts: 2, joined: 'Oct 02, 2026' },
-  { id: 'ST004', name: 'သီရိမွန်', email: 'thiri.mon@devsprint.com', status: 'Active', score: 790, attempts: 6, joined: 'Oct 05, 2026' },
+  { id: 'ST001', name: 'Min Htet', email: 'min.htet@devsprint.com', status: 'Active', score: 850, attempts: 5, joined: 'Sep 12, 2026' },
+  { id: 'ST002', name: 'May Thet Htar', email: 'may.thet.htar@devsprint.com', status: 'Active', score: 620, attempts: 4, joined: 'Sep 18, 2026' },
+  { id: 'ST003', name: 'Ko Ko Aung', email: 'ko.ko.aung@devsprint.com', status: 'Inactive', score: 430, attempts: 2, joined: 'Oct 02, 2026' },
+  { id: 'ST004', name: 'Thiri Mon', email: 'thiri.mon@devsprint.com', status: 'Active', score: 790, attempts: 6, joined: 'Oct 05, 2026' },
 ];
 
 export const demoAttempts = [
@@ -32,7 +32,7 @@ export const demoAssignments = [
 ];
 
 export const demoActivities = [
-  { text: 'New student registered', detail: 'ST124 · သီရိမွန်', time: '2m ago', tone: 'blue' },
+  { text: 'New student registered', detail: 'ST124 · Thiri Mon', time: '2m ago', tone: 'blue' },
   { text: 'Scenario “Database Failure” updated', detail: 'Draft saved by Admin', time: '5m ago', tone: 'amber' },
   { text: 'New attempt from ST124', detail: 'Payment Gateway Meltdown · 85%', time: '8m ago', tone: 'green' },
 ];
@@ -41,7 +41,7 @@ export const demoAiReports = [
   {
     id: 'report-1',
     student: 'ST001',
-    name: 'မောင်မင်းထက်',
+    name: 'Min Htet',
     role: 'Project Manager',
     scenario: 'Sprint 12 Scope Creep Crisis',
     score: 85,
@@ -55,7 +55,7 @@ export const demoAiReports = [
   {
     id: 'report-2',
     student: 'ST002',
-    name: 'မေသက်ထား',
+    name: 'May Thet Htar',
     role: 'QA Engineer',
     scenario: 'Payment Gateway Meltdown',
     score: 78,
@@ -69,7 +69,7 @@ export const demoAiReports = [
   {
     id: 'report-3',
     student: 'ST003',
-    name: 'ကိုကိုအောင်',
+    name: 'Ko Ko Aung',
     role: 'Software Tester',
     scenario: 'Database Failure',
     score: 64,
@@ -83,6 +83,6 @@ export const demoAiReports = [
 ];
 
 export const demoMonitoring = [
-  { student: 'ST005 · သီရိမွန်', scenario: 'Payment Gateway Meltdown', state: 'In Progress', started: '10:24 AM', events: ['Tab switched (10:26 AM)', 'Screen off (10:27 AM)'] },
-  { student: 'ST001 · မောင်မင်းထက်', scenario: 'API Timeout', state: 'Completed', started: '9:48 AM', events: ['Submitted (10:02 AM)'] },
+  { student: 'ST005 · Thiri Mon', scenario: 'Payment Gateway Meltdown', state: 'In Progress', started: '10:24 AM', events: ['Tab switched (10:26 AM)', 'Screen off (10:27 AM)'] },
+  { student: 'ST001 · Min Htet', scenario: 'API Timeout', state: 'Completed', started: '9:48 AM', events: ['Submitted (10:02 AM)'] },
 ];
